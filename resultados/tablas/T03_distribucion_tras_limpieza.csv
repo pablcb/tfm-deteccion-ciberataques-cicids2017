@@ -1,0 +1,10 @@
+Categoria,Label,Registros,% del total
+Benigno,BENIGN,1285261,75.627
+DoS,DoS Hulk,172688,10.161
+DoS,DoS GoldenEye,10277,0.605
+DoS,DoS slowloris,5374,0.316
+DoS,DoS Slowhttptest,5228,0.308
+DDoS,DDoS,127995,7.531
+PortScan,PortScan,90694,5.337
+Bot,Bot,1948,0.115
+Heartbleed,Heartbleed,7,0.0

@@ -1,0 +1,5 @@
+Escenario,Mayor F1,Comparación de McNemar con el de mayor F1,Sin diferencia significativa,Modelo seleccionado
+E1,XGBoost,Random Forest: p = 1.62e-01 (sin diferencia significativa); DNN: p = 8.62e-97 (distinto); SVM: p = 2.82e-214 (distinto),"XGBoost, Random Forest",XGBoost
+E2,XGBoost,Random Forest: p = 7.44e-03 (distinto); DNN: p = 6.85e-75 (distinto); SVM: p = 2.89e-203 (distinto),XGBoost,XGBoost
+E3,Random Forest,XGBoost: p = 8.45e-21 (distinto); SVM: p = 3.12e-280 (distinto); DNN: p = 1.77e-200 (distinto),Random Forest,Random Forest
+Multiclase (E2 frente a E3),E2 · XGBoost,E3 · Random Forest: p = 2.01e-04 (distinto),E2 · XGBoost,E2 · XGBoost

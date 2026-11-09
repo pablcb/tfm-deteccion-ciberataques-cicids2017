@@ -1,0 +1,33 @@
+Característica eliminada,Motivo,Correlacionada con
+Bwd PSH Flags,Constante en entrenamiento,
+Fwd URG Flags,Constante en entrenamiento,
+Bwd URG Flags,Constante en entrenamiento,
+CWE Flag Count,Constante en entrenamiento,
+Fwd Avg Bytes/Bulk,Constante en entrenamiento,
+Fwd Avg Packets/Bulk,Constante en entrenamiento,
+Fwd Avg Bulk Rate,Constante en entrenamiento,
+Bwd Avg Bytes/Bulk,Constante en entrenamiento,
+Bwd Avg Packets/Bulk,Constante en entrenamiento,
+Bwd Avg Bulk Rate,Constante en entrenamiento,
+Total Length of Bwd Packets,"Correlación > 0,95","Total Backward Packets (r = 0,964)"
+Fwd Packet Length Std,"Correlación > 0,95","Fwd Packet Length Max (r = 0,976)"
+Bwd Packet Length Mean,"Correlación > 0,95","Bwd Packet Length Max (r = 0,961)"
+Bwd Packet Length Std,"Correlación > 0,95","Bwd Packet Length Max (r = 0,986)"
+Fwd IAT Total,"Correlación > 0,95","Flow Duration (r = 0,999)"
+Fwd IAT Max,"Correlación > 0,95","Flow IAT Max (r = 0,998)"
+Fwd Header Length,"Correlación > 0,95","Total Fwd Packets (r = 0,968)"
+Bwd Header Length,"Correlación > 0,95","Total Backward Packets (r = 0,974)"
+Fwd Packets/s,"Correlación > 0,95","Flow Packets/s (r = 0,981)"
+Packet Length Std,"Correlación > 0,95","Max Packet Length (r = 0,985)"
+SYN Flag Count,"Correlación > 0,95","Fwd PSH Flags (r = 1,000)"
+ECE Flag Count,"Correlación > 0,95","RST Flag Count (r = 1,000)"
+Average Packet Size,"Correlación > 0,95","Packet Length Mean (r = 0,998)"
+Avg Fwd Segment Size,"Correlación > 0,95","Fwd Packet Length Mean (r = 1,000)"
+Avg Bwd Segment Size,"Correlación > 0,95","Bwd Packet Length Max (r = 0,961)"
+Subflow Fwd Packets,"Correlación > 0,95","Total Fwd Packets (r = 1,000)"
+Subflow Fwd Bytes,"Correlación > 0,95","Total Length of Fwd Packets (r = 1,000)"
+Subflow Bwd Packets,"Correlación > 0,95","Total Backward Packets (r = 1,000)"
+Subflow Bwd Bytes,"Correlación > 0,95","Total Backward Packets (r = 0,964)"
+Idle Mean,"Correlación > 0,95","Flow IAT Max (r = 0,982)"
+Idle Max,"Correlación > 0,95","Flow IAT Max (r = 0,992)"
+Idle Min,"Correlación > 0,95","Flow IAT Max (r = 0,952)"

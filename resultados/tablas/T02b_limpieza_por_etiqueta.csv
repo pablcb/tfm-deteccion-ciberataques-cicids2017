@@ -1,0 +1,10 @@
+Etiqueta,3. Valores infinitos o nulos,4. Registros duplicados,5. Valores negativos no válidos
+BENIGN,1174,96235,1601
+Bot,10,8,0
+DDoS,2,11,19
+DoS GoldenEye,0,11,5
+DoS Hulk,949,57278,158
+DoS Slowhttptest,0,271,0
+DoS slowloris,0,422,0
+Heartbleed,0,0,4
+PortScan,126,68110,0

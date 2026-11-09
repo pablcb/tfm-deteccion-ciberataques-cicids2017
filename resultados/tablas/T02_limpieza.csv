@@ -1,0 +1,7 @@
+Paso,Registros eliminados,Registros restantes,% eliminado
+Registros de partida,0,1925866,0.0
+1. Normalización de los nombres de las columnas,0,1925866,0.0
+2. Eliminación de la columna duplicada (Fwd Header Length.1),0,1925866,0.0
+3. Valores infinitos o nulos,2261,1923605,0.12
+4. Registros duplicados,222346,1701259,11.55
+5. Valores negativos no válidos,1787,1699472,0.09

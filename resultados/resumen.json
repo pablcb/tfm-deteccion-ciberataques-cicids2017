@@ -1,0 +1,366 @@
+{
+ "modo_prueba": false,
+ "registros_originales": 1925866,
+ "columnas_duplicadas_eliminadas": [
+  "Fwd Header Length.1"
+ ],
+ "n_caracteristicas_tras_limpieza": 77,
+ "flujos_con_etiqueta_contradictoria": 182,
+ "registros_tras_limpieza": 1699472,
+ "distribucion_categoria": {
+  "Benigno": 1285261,
+  "DoS": 193567,
+  "DDoS": 127995,
+  "PortScan": 90694,
+  "Bot": 1948,
+  "Heartbleed": 7
+ },
+ "tamanos_particion": {
+  "entrenamiento": 1189630,
+  "validacion": 254921,
+  "prueba": 254921
+ },
+ "n_caracteristicas_seleccionadas": 45,
+ "caracteristicas_seleccionadas": [
+  "Destination Port",
+  "Flow Duration",
+  "Total Fwd Packets",
+  "Total Backward Packets",
+  "Total Length of Fwd Packets",
+  "Fwd Packet Length Max",
+  "Fwd Packet Length Min",
+  "Fwd Packet Length Mean",
+  "Bwd Packet Length Max",
+  "Bwd Packet Length Min",
+  "Flow Bytes/s",
+  "Flow Packets/s",
+  "Flow IAT Mean",
+  "Flow IAT Std",
+  "Flow IAT Max",
+  "Flow IAT Min",
+  "Fwd IAT Mean",
+  "Fwd IAT Std",
+  "Fwd IAT Min",
+  "Bwd IAT Total",
+  "Bwd IAT Mean",
+  "Bwd IAT Std",
+  "Bwd IAT Max",
+  "Bwd IAT Min",
+  "Fwd PSH Flags",
+  "Bwd Packets/s",
+  "Min Packet Length",
+  "Max Packet Length",
+  "Packet Length Mean",
+  "Packet Length Variance",
+  "FIN Flag Count",
+  "RST Flag Count",
+  "PSH Flag Count",
+  "ACK Flag Count",
+  "URG Flag Count",
+  "Down/Up Ratio",
+  "Init_Win_bytes_forward",
+  "Init_Win_bytes_backward",
+  "act_data_pkt_fwd",
+  "min_seg_size_forward",
+  "Active Mean",
+  "Active Std",
+  "Active Max",
+  "Active Min",
+  "Idle Std"
+ ],
+ "smote": {
+  "Benigno": [
+   899681,
+   899681
+  ],
+  "DoS": [
+   135497,
+   135497
+  ],
+  "DDoS": [
+   89596,
+   89596
+  ],
+  "PortScan": [
+   63486,
+   63486
+  ],
+  "Bot": [
+   1364,
+   20000
+  ]
+ },
+ "mejor_modelo": {
+  "E1": [
+   "E1",
+   "XGBoost"
+  ],
+  "E2": [
+   "E2",
+   "XGBoost"
+  ],
+  "E3": [
+   "E3",
+   "Random Forest"
+  ],
+  "multiclase": [
+   "E2",
+   "XGBoost"
+  ],
+  "binario": [
+   "E1",
+   "XGBoost"
+  ]
+ },
+ "shap": {
+  "binario": {
+   "modelo": "E1 · XGBoost",
+   "explicador": "TreeExplainer",
+   "n_flujos": 5000,
+   "tiempo_s": 0.12286100001074374
+  },
+  "multiclase": {
+   "modelo": "E2 · XGBoost",
+   "explicador": "TreeExplainer",
+   "n_flujos": 5000,
+   "tiempo_s": 1.1126172000076622
+  }
+ },
+ "shap_top10_binario": [
+  "Destination Port",
+  "Init_Win_bytes_forward",
+  "Bwd Packet Length Max",
+  "Init_Win_bytes_backward",
+  "PSH Flag Count",
+  "Fwd Packet Length Max",
+  "Bwd Packets/s",
+  "Total Backward Packets",
+  "Packet Length Variance",
+  "Fwd IAT Mean"
+ ],
+ "posicion_destination_port_binario": 1,
+ "falsos_positivos_modelo_binario": 52,
+ "prototipo": [
+  {
+   "Modelo": "E1 · XGBoost (binario)",
+   "Lotes medidos": 251,
+   "Latencia media (ms/lote)": 1.3726111553053733,
+   "Mediana (ms)": 1.3526999973692,
+   "Percentil 95 (ms)": 1.6985500042210333,
+   "Percentil 99 (ms)": 1.9533000013325363,
+   "Flujos por segundo": 728538.4474217856,
+   "Alertas por lote (media)": 247.26693227091633,
+   "Explicación SHAP por alerta (ms)": 1.119499997003004
+  },
+  {
+   "Modelo": "E2 · XGBoost (multiclase)",
+   "Lotes medidos": 251,
+   "Latencia media (ms/lote)": 3.606227091935638,
+   "Mediana (ms)": 3.3116000122390687,
+   "Percentil 95 (ms)": 4.726150007627439,
+   "Percentil 99 (ms)": 5.2095499995630234,
+   "Flujos por segundo": 277298.1219724716,
+   "Alertas por lote (media)": 247.4581673306773,
+   "Explicación SHAP por alerta (ms)": 4.325999994762242
+  }
+ ],
+ "metricas": {
+  "E1 · Random Forest": {
+   "precision": 0.9990332559938129,
+   "sensibilidad": 0.997955931821474,
+   "f1": 0.9984943033133379,
+   "auc": 0.9999661284835868,
+   "fpr": 0.00031121946159033144,
+   "inferencia_ms_1000": 0.5099415113259284
+  },
+  "E1 · XGBoost": {
+   "precision": 0.999162168694111,
+   "sensibilidad": 0.9981007870467239,
+   "f1": 0.9986311958517182,
+   "auc": 0.9999931704465095,
+   "fpr": 0.00026972353337828726,
+   "inferencia_ms_1000": 0.2470388865432948
+  },
+  "E1 · SVM": {
+   "precision": 0.9910807890195319,
+   "sensibilidad": 0.9890070979060372,
+   "f1": 0.9900428576031965,
+   "auc": 0.999389183740284,
+   "fpr": 0.002868406037657555,
+   "inferencia_ms_1000": 89.55016103027603
+  },
+  "E1 · DNN": {
+   "precision": 0.9974415855692472,
+   "sensibilidad": 0.9914374466852296,
+   "f1": 0.9944304533126695,
+   "auc": 0.999925130541911,
+   "fpr": 0.0008195445821878728,
+   "inferencia_ms_1000": 0.47501265094412665
+  },
+  "E2 · Random Forest": {
+   "precision": 0.9753743755095027,
+   "sensibilidad": 0.9486669642085831,
+   "f1": 0.9609413382673073,
+   "auc": 0.9995696033214079,
+   "fpr": 0.000326780434669848,
+   "inferencia_ms_1000": 1.8144613996455872
+  },
+  "E2 · XGBoost": {
+   "precision": 0.9726371532245033,
+   "sensibilidad": 0.9537095968977944,
+   "f1": 0.9626235306159702,
+   "auc": 0.9987231144991154,
+   "fpr": 0.0003630893718553867,
+   "inferencia_ms_1000": 2.037844421779527
+  },
+  "E2 · SVM": {
+   "precision": 0.9900173679914419,
+   "sensibilidad": 0.867055997971887,
+   "f1": 0.9003552415737517,
+   "auc": 0.9953253562776826,
+   "fpr": 0.002443072773484102,
+   "inferencia_ms_1000": 120.40457241488471
+  },
+  "E2 · DNN": {
+   "precision": 0.9896619772323925,
+   "sensibilidad": 0.8723470491678688,
+   "f1": 0.9054501243983676,
+   "auc": 0.9994542061092819,
+   "fpr": 0.0007469267078167955,
+   "inferencia_ms_1000": 0.5288262984113287
+  },
+  "E3 · Random Forest": {
+   "precision": 0.9427090089179572,
+   "sensibilidad": 0.9869443636979023,
+   "f1": 0.9618209079897401,
+   "auc": 0.9992270397300631,
+   "fpr": 0.0007365527257637844,
+   "inferencia_ms_1000": 0.8366703279368304
+  },
+  "E3 · XGBoost": {
+   "precision": 0.9371879595054577,
+   "sensibilidad": 0.992075388398533,
+   "f1": 0.9598806589529267,
+   "auc": 0.9999042721925953,
+   "fpr": 0.0008299185642408839,
+   "inferencia_ms_1000": 0.6190377373138225
+  },
+  "E3 · SVM": {
+   "precision": 0.899571256814577,
+   "sensibilidad": 0.9265767505055669,
+   "f1": 0.9116046854192895,
+   "auc": 0.9953180532019044,
+   "fpr": 0.004486747237927279,
+   "inferencia_ms_1000": 120.70188215913437
+  },
+  "E3 · DNN": {
+   "precision": 0.8536011246444974,
+   "sensibilidad": 0.9784831780544252,
+   "f1": 0.882739595613727,
+   "auc": 0.9988681959651196,
+   "fpr": 0.004813527672597126,
+   "inferencia_ms_1000": 0.39496234113849704
+  }
+ },
+ "tablas": {
+  "T01_composicion_original": "Registros por archivo y etiqueta antes de la limpieza (comprobación de la Tabla 3)",
+  "T02_limpieza": "Registros eliminados en cada paso de la limpieza",
+  "T02b_limpieza_por_etiqueta": "Registros eliminados en cada paso, por etiqueta original",
+  "T02c_valores_problematicos": "Características con valores infinitos, nulos o negativos",
+  "T03_distribucion_tras_limpieza": "Registros por etiqueta y categoría tras la limpieza",
+  "T04_particion": "Registros por categoría en los conjuntos de entrenamiento, validación y prueba",
+  "T05_caracteristicas_eliminadas": "Características eliminadas en el preprocesamiento",
+  "T06_estadisticos_descriptivos": "Estadísticos descriptivos de características relevantes por categoría",
+  "T07_smote": "Estrategia de sobremuestreo con SMOTE en el conjunto de entrenamiento (cifras reales)",
+  "T08_hiperparametros": "Hiperparámetros óptimos, tamaño de los conjuntos y tiempos de cada modelo",
+  "T09_E1_metricas": "Escenario E1 (binaria): métricas sobre el conjunto de prueba",
+  "T10_E2_metricas": "Escenario E2 (multiclase): métricas macro sobre el conjunto de prueba",
+  "T11_E3_metricas": "Escenario E3 (multiclase con SMOTE): métricas macro sobre el conjunto de prueba",
+  "T09b_E1_matriz_confusion": "Escenario E1: verdaderos/falsos positivos y negativos en prueba",
+  "T12_E2_por_clase": "Escenario E2: precisión, sensibilidad y F1 por categoría",
+  "T13_E3_por_clase": "Escenario E3: precisión, sensibilidad y F1 por categoría",
+  "T14_efecto_smote": "Efecto de SMOTE: diferencia E3 − E2 por categoría y en la tasa de falsos positivos",
+  "T15_mcnemar": "Prueba de McNemar entre cada par de modelos (corrección de Bonferroni)",
+  "T16_seleccion_modelo": "Aplicación del criterio de selección del mejor modelo (apartado 4.5)",
+  "T17_shap_ranking_binario": "Importancia SHAP global del mejor modelo binario (E1 · XGBoost)",
+  "T18_shap_ranking_multiclase": "Importancia SHAP por categoría del mejor modelo multiclase (E2 · XGBoost)",
+  "T19_prototipo_latencia": "Simulación del prototipo en lotes de 1000 flujos"
+ },
+ "figuras": {
+  "F01_distribucion_clases": "Distribución de registros por categoría antes y después de la limpieza",
+  "F02_dnn_curvas_aprendizaje": "Evolución de la pérdida de la DNN en entrenamiento y validación",
+  "F03_E1_matrices_confusion": "Matrices de confusión del escenario E1 en el conjunto de prueba",
+  "F04_E1_curvas_roc": "Escenario E1: curvas ROC en el conjunto de prueba",
+  "F05_E2_matrices_confusion": "Matrices de confusión del escenario E2 en el conjunto de prueba (porcentaje por fila y número de flujos)",
+  "F06_E2_curvas_roc": "Escenario E2: curvas ROC macro (uno contra el resto) en el conjunto de prueba",
+  "F07_E3_matrices_confusion": "Matrices de confusión del escenario E3 en el conjunto de prueba (porcentaje por fila y número de flujos)",
+  "F08_E3_curvas_roc": "Escenario E3: curvas ROC macro (uno contra el resto) en el conjunto de prueba",
+  "F09_comparacion_modelos": "Comparación del F1 y de la tasa de falsos positivos de los doce modelos",
+  "F10_shap_binario_barras": "Importancia global SHAP (media del valor absoluto) del mejor modelo binario (XGBoost)",
+  "F11_shap_binario_beeswarm": "Gráfico de resumen SHAP (beeswarm) del mejor modelo binario (XGBoost)",
+  "F12_shap_multiclase_por_categoria": "Las 10 características más importantes según SHAP para cada categoría (E2 · XGBoost)",
+  "F13_shap_multiclase_beeswarm_DoS": "Gráfico de resumen SHAP para la categoría DoS (E2 · XGBoost)",
+  "F13_shap_multiclase_beeswarm_DDoS": "Gráfico de resumen SHAP para la categoría DDoS (E2 · XGBoost)",
+  "F13_shap_multiclase_beeswarm_PortScan": "Gráfico de resumen SHAP para la categoría PortScan (E2 · XGBoost)",
+  "F13_shap_multiclase_beeswarm_Bot": "Gráfico de resumen SHAP para la categoría Bot (E2 · XGBoost)",
+  "F14_shap_local_DoS": "Explicación SHAP local de un flujo de DoS detectado por el mejor modelo binario",
+  "F14_shap_local_DDoS": "Explicación SHAP local de un flujo de DDoS detectado por el mejor modelo binario",
+  "F14_shap_local_PortScan": "Explicación SHAP local de un flujo de PortScan detectado por el mejor modelo binario",
+  "F14_shap_local_Bot": "Explicación SHAP local de un flujo de Bot detectado por el mejor modelo binario",
+  "F14_shap_local_falso_positivo_1": "Explicación SHAP local de un falso positivo (tráfico benigno clasificado como ataque) del mejor modelo binario",
+  "F14_shap_local_falso_positivo_2": "Explicación SHAP local de un falso positivo (tráfico benigno clasificado como ataque) del mejor modelo binario",
+  "F15_arquitectura_referencia": "Arquitectura de referencia propuesta para integrar el modelo en la monitorización de la red",
+  "F16_latencia_prototipo": "Distribución de la latencia por lote del modelo binario seleccionado (XGBoost)"
+ },
+ "entorno": {
+  "python": "3.12.0",
+  "sistema": "Windows 11",
+  "procesador": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "nucleos_logicos": 16,
+  "ram_gb": 30.9,
+  "colab": false,
+  "gpu_tensorflow": [],
+  "dispositivo_xgboost": "cpu",
+  "librerias": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "scikit-learn": "1.9.1",
+   "imbalanced-learn": "0.14.2",
+   "xgboost": "3.4.1",
+   "tensorflow": "2.21.0",
+   "keras": "3.15.1",
+   "shap": "0.52.0",
+   "matplotlib": "3.11.2",
+   "scipy": "1.18.1",
+   "statsmodels": "0.15.0",
+   "joblib": "1.6.0",
+   "pyarrow": "25.0.1",
+   "openpyxl": "3.1.5"
+  },
+  "tiempo_total_min": 73.6,
+  "configuracion": {
+   "SEMILLA": 42,
+   "PARTICION": [
+    0.7,
+    0.15,
+    0.15
+   ],
+   "UMBRAL_CORRELACION": 0.95,
+   "SMOTE_MINIMO": 20000,
+   "SMOTE_K": 5,
+   "N_ITER": 20,
+   "CV_PARTICIONES": 3,
+   "FRACCION_BUSQUEDA": 0.2,
+   "SVM_N": 50000,
+   "DNN_FRACCION_BUSQUEDA": 0.2,
+   "DNN_EPOCAS_MAX": 50,
+   "DNN_PACIENCIA": 5,
+   "SHAP_N": 5000,
+   "SHAP_MAX_MINUTOS": 30,
+   "LOTE_PROTOTIPO": 1000,
+   "ALFA": 0.05,
+   "N_JOBS": -1,
+   "FRACCION_MODO_PRUEBA": 0.02
+  }
+ }
+}

@@ -1,0 +1,6 @@
+Categoría,Registros en entrenamiento,Estrategia,Registros tras SMOTE,Factor
+Benigno,899681,Sin modificar,899681,1.0
+DoS,135497,Sin modificar,135497,1.0
+DDoS,89596,Sin modificar,89596,1.0
+PortScan,63486,Sin modificar,63486,1.0
+Bot,1364,SMOTE,20000,14.66

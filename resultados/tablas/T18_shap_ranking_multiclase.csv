@@ -1,0 +1,51 @@
+Categoría,Posición,Característica,Media |SHAP|
+Benigno,1,Destination Port,0.9778241
+Benigno,2,Bwd Packet Length Max,0.9671551
+Benigno,3,Init_Win_bytes_backward,0.82733005
+Benigno,4,Init_Win_bytes_forward,0.82398623
+Benigno,5,Fwd Packet Length Max,0.7683458
+Benigno,6,Packet Length Variance,0.43557906
+Benigno,7,Flow IAT Min,0.28417432
+Benigno,8,Total Fwd Packets,0.2771597
+Benigno,9,Fwd IAT Min,0.26101476
+Benigno,10,Total Backward Packets,0.22043337
+DoS,1,Destination Port,2.9374492
+DoS,2,Init_Win_bytes_forward,1.1661441
+DoS,3,Init_Win_bytes_backward,0.885245
+DoS,4,Bwd Packets/s,0.59310174
+DoS,5,Min Packet Length,0.56500906
+DoS,6,min_seg_size_forward,0.45940763
+DoS,7,Flow IAT Mean,0.44152677
+DoS,8,Flow IAT Max,0.40528607
+DoS,9,Flow Packets/s,0.31853187
+DoS,10,Fwd IAT Min,0.31523305
+DDoS,1,Destination Port,1.6812934
+DDoS,2,Fwd Packet Length Max,1.2456994
+DDoS,3,Init_Win_bytes_forward,0.9503059
+DDoS,4,Fwd Packet Length Mean,0.9119526
+DDoS,5,ACK Flag Count,0.727529
+DDoS,6,act_data_pkt_fwd,0.72094095
+DDoS,7,min_seg_size_forward,0.6346851
+DDoS,8,Total Length of Fwd Packets,0.6285121
+DDoS,9,Flow IAT Mean,0.47284347
+DDoS,10,Init_Win_bytes_backward,0.4705444
+PortScan,1,Total Length of Fwd Packets,1.5009056
+PortScan,2,Packet Length Mean,1.1104876
+PortScan,3,ACK Flag Count,0.7717262
+PortScan,4,PSH Flag Count,0.7647342
+PortScan,5,Destination Port,0.69096005
+PortScan,6,Flow IAT Min,0.6907538
+PortScan,7,Flow Bytes/s,0.6866999
+PortScan,8,Flow Duration,0.6282418
+PortScan,9,Flow Packets/s,0.5761389
+PortScan,10,Bwd Packets/s,0.5285682
+Bot,1,Init_Win_bytes_forward,1.6870426
+Bot,2,Destination Port,1.2569096
+Bot,3,Flow IAT Min,1.2087007
+Bot,4,Bwd IAT Std,0.9437179
+Bot,5,Fwd IAT Std,0.80006015
+Bot,6,min_seg_size_forward,0.59492844
+Bot,7,Flow Packets/s,0.52389765
+Bot,8,Init_Win_bytes_backward,0.51065123
+Bot,9,Bwd Packets/s,0.49210992
+Bot,10,Flow IAT Mean,0.44240785

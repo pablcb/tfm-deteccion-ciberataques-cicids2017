@@ -1,0 +1,14 @@
+Jornada,Archivo,Label,Registros,Tabla 3 (Cap. 4),¿Coincide?
+Lunes,Monday-WorkingHours.pcap_ISCX.csv,BENIGN,529918,529918,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,BENIGN,440031,440031,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,DoS slowloris,5796,5796,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,DoS Slowhttptest,5499,5499,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,DoS Hulk,231073,231073,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,DoS GoldenEye,10293,10293,Sí
+Miércoles,Wednesday-workingHours.pcap_ISCX.csv,Heartbleed,11,11,Sí
+Viernes (mañana),Friday-WorkingHours-Morning.pcap_ISCX.csv,BENIGN,189067,189067,Sí
+Viernes (mañana),Friday-WorkingHours-Morning.pcap_ISCX.csv,Bot,1966,1966,Sí
+"Viernes (tarde, PortScan)",Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,BENIGN,127537,127537,Sí
+"Viernes (tarde, PortScan)",Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,PortScan,158930,158930,Sí
+"Viernes (tarde, DDoS)",Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,BENIGN,97718,97718,Sí
+"Viernes (tarde, DDoS)",Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,DDoS,128027,128027,Sí

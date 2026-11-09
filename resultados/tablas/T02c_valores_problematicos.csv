@@ -1,0 +1,11 @@
+Característica,Infinitos,Nulos,Negativos
+Flow Duration,0,0,77
+Flow Bytes/s,1142,1119,65
+Flow Packets/s,2261,0,77
+Flow IAT Mean,0,0,77
+Flow IAT Max,0,0,77
+Flow IAT Min,0,0,1763
+Fwd IAT Min,0,0,17
+Fwd Header Length,0,0,24
+Bwd Header Length,0,0,17
+min_seg_size_forward,0,0,24
