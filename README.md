@@ -41,7 +41,7 @@ tablas están en `resultados/tablas` (y juntas en `resultados/tablas_resultados.
 ├── requirements.txt                      versiones exactas de las bibliotecas
 ├── ejecutar_experimento.bat              ejecución completa con doble clic (Windows)
 ├── registro_ejecucion_real.txt           registro de la ejecución del 31/10/2026
-├── datos/LEEME.txt                       cómo descargar los datos (no se incluyen)
+├── datos/README.txt                       cómo descargar los datos (no se incluyen)
 ├── pruebas/generar_datos_sinteticos.py   datos falsos para probar el código sin el dataset
 └── resultados/
     ├── tablas/                           tablas T01 a T19 en CSV
@@ -54,7 +54,7 @@ tablas están en `resultados/tablas` (y juntas en `resultados/tablas_resultados.
 
 ## Cómo reproducir el experimento
 
-1. Descargar los datos siguiendo `datos/LEEME.txt` (formulario del Canadian Institute for Cybersecurity) y copiar en
+1. Descargar los datos siguiendo `datos/README.txt` (formulario del Canadian Institute for Cybersecurity) y copiar en
    `datos/` los cinco CSV del lunes, el miércoles y el viernes.
 2. En Windows, hacer doble clic en `ejecutar_experimento.bat`. El archivo crea un entorno con Python 3.12 en
    `%USERPROFILE%\tfm_cicids2017_venv`, instala `requirements.txt`, hace una prueba rápida con el 2 % de los datos y

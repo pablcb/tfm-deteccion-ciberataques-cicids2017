@@ -16,7 +16,7 @@ for %%F in (Monday-WorkingHours.pcap_ISCX.csv Wednesday-workingHours.pcap_ISCX.c
     dir /s /b "datos\%%F" >nul 2>&1 || set FALTAN=1
 )
 if defined FALTAN (
-    echo [!] Faltan datos. Sigue las instrucciones de datos\LEEME.txt y vuelve a abrir este archivo.
+    echo [!] Faltan datos. Sigue las instrucciones de datos\README.txt y vuelve a abrir este archivo.
     pause
     exit /b 1
 )
