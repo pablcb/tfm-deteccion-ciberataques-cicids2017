@@ -2,7 +2,7 @@
 # Solo sirven para comprobar que el notebook se ejecuta sin errores: sus cifras NO significan nada y
 # NUNCA deben usarse en el TFM.
 #
-# Uso (desde la carpeta Codigo_TFM):
+# Uso (desde la carpeta del repositorio):
 #     python pruebas/generar_datos_sinteticos.py
 # Crea los CSV en pruebas/base_sintetica/datos/MachineLearningCVE, separados de los datos reales.
 # Para probar el notebook con ellos, pon en su primera celda:
