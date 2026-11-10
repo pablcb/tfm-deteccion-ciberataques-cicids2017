@@ -1060,6 +1060,14 @@ axes[0].invert_yaxis()
 axes[0].set_xlabel('F1 (macro en E2 y E3)')
 axes[1].set_xlabel('Tasa de falsos positivos (escala log.)')
 axes[1].set_xscale('log')
+# Eje logarítmico legible: marcas en 1, 2 y 5 de cada potencia de 10 (solo en las potencias si el rango es amplio),
+# números en notación decimal con coma y sin etiquetas en las subdivisiones, que si no se solapan
+fpr_todos = [max(RES[(e, n)]['fpr'], 1e-6) for e in ESCENARIOS for n in MODELOS]
+subdivisiones = (1.0, 2.0, 5.0) if max(fpr_todos) / min(fpr_todos) <= 100 else (1.0,)
+axes[1].xaxis.set_major_locator(matplotlib.ticker.LogLocator(base=10, subs=subdivisiones))
+axes[1].xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+axes[1].xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(
+    lambda v, _: np.format_float_positional(float(f'{v:.2g}'), trim='-').replace('.', ',')))
 for ax in axes:
     ax.grid(axis='x', which='major')
     ax.set_axisbelow(True)
